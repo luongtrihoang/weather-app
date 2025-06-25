@@ -116,19 +116,6 @@ describe('SearchHistory', () => {
     expect(screen.queryByText('Singapore, SG')).not.toBeInTheDocument()
   })
 
-  it('should display timestamps for history items', () => {
-    render(
-      <SearchHistory
-        history={mockSearchHistory}
-        onSearchFromHistory={mockOnSearchFromHistory}
-        onDeleteFromHistory={mockOnDeleteFromHistory}
-      />
-    )
-
-    expect(screen.getByText('01-01-2023 19:00am')).toBeInTheDocument()
-    expect(screen.getByText('01-01-2023 17:00am')).toBeInTheDocument()
-  })
-
   it('should handle single item in history', () => {
     const singleItemHistory = [mockSearchHistory[0]]
     

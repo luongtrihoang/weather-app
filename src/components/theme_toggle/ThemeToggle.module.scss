@@ -1,0 +1,36 @@
+.themeToggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+  border-radius: 50%;
+  min-width: 50px;
+  min-height: 50px;
+  padding: 0.75rem;
+  box-shadow: var(--shadow-light);
+  backdrop-filter: blur(10px);
+  
+  @media (max-width: 767px) {
+    min-width: 45px;
+    min-height: 45px;
+    padding: 0.5rem;
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+  
+  &:hover {
+    transform: translateY(-2px) scale(1.05);
+  }
+}
+
+.toggleText {
+  @media (max-width: 767px) {
+    display: none;
+  }
+  
+  @media (min-width: 768px) {
+    margin-left: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+} 
